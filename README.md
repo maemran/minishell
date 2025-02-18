@@ -1,15 +1,16 @@
-MiniShell
+                                                            MiniShell
 
-expander
+	(expander)
  
-lexer/parser
+	(lexer/parser)
 
-executer
+	(executer)
 
 
-
+                                                              TASKS
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+                                                                
 ->> "   "
 
 ->> '     '
@@ -37,8 +38,57 @@ executer
  
 ◦  (unset)
 
-◦   (env)
+◦  (env)
  
 ◦  (exit)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+
+
+
+						Explaintion about Minishell Functions
+
+#1 readline()
+char *readline (const char *prompt);
+
+This function used to take cmds from shell to do some action and save the cmds in *(char *) variable* 
+you need to free the value of *(char *) variable* 
+
+#2 add_history()
+void add_history(char *s);
+
+This function dont return anything and when the readline return the *(char *) variable*
+this fuction added it to the history 
+
+What is the history: history is when you move the Arrows to back and front that display all command you was written
+
+#3  rl_clear_history()
+void rl_clear_history(void);
+
+used to clear history
+
+#4 rl_on_new_line()
+int rl_on_new_line(void);
+
+rl_on_new_line(); → "Start Fresh"
+👉 Think of it as telling the notebook, "Okay, I'm starting a new clean line!"
+👉 It resets the input so Readline knows a fresh command is coming.
+
+#5 rl_replace_line()
+
+rl_replace_line("", 0); → "Erase Mistakes"
+👉 This is like erasing what you were writing before you got distracted.
+👉 It clears the current input, just like wiping off a whiteboard.
+
+#6 rl_redisplay()
+int rl_redisplay(void);
+
+rl_redisplay(); → "Redraw the Notebook"
+👉 Now that everything is cleared, this function redraws the screen.
+👉 It’s like reopening your notebook so you can continue writing smoothly.
+
+
+
+
+
+
