@@ -1,10 +1,10 @@
                                                             MiniShell
 
-	(expander)
+(expander)
  
-	(lexer/parser)
+(lexer/parser)
 
-	(executer)
+(executer)
 
 
                                                               TASKS
@@ -87,7 +87,10 @@ rl_redisplay(); → "Redraw the Notebook"
 👉 Now that everything is cleared, this function redraws the screen.
 👉 It’s like reopening your notebook so you can continue writing smoothly.
 
-
+So when you enter ^c in readlin and you was write something like this (minishell> jkdsfkj^c)
+this function clear the (jkdsfkj)
+start the prompt in new line
+and refresh the prompt
 
 
 
