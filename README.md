@@ -92,6 +92,28 @@ this function clear the (jkdsfkj)
 start the prompt in new line
 and refresh the prompt
 
+_____________________________________________________________________________________________________________________________________________________________________________
+
+                                                                     Environment Variable
 
 
+- Environment variables passed to a process when it starts. It is an array of strings.
 
+- Environment variables store system-wide or user-specific settings, such as PATH, HOME, SHELL, etc.
+
+- They are inherited by child processes unless explicitly modified:
+                                  👇
+                                  👇
+  	How Environment Variables Are Inherited by Child Processes
+  
+When you run a program in Linux, it is executed as a process. Each process has its own set of environment variables,
+and these variables are inherited by child processes unless explicitly modified
+
+👉 What Does "Inherited by Child Processes" Mean?
+
+When a parent process (like your terminal shell) starts a new process (like running a program), it passes its environment variables to the new process. 
+The child process gets a copy of the environment variables of the parent.
+
+
+__________________________________________________________________________________________________________________________________________________________________________________
+  
