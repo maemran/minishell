@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_two_d_array.c                              :+:      :+:    :+:   */
+/*   ft_two_d_print.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: salshaha <salshaha@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/22 19:19:33 by maemran           #+#    #+#             */
-/*   Updated: 2025/04/14 10:03:15 by salshaha         ###   ########.fr       */
+/*   Created: 2025/03/08 23:53:42 by maemran           #+#    #+#             */
+/*   Updated: 2025/04/14 09:55:34 by salshaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_tow_d_array(char **string)
+void	ft_two_d_print(char **array)
 {
-	int	i;
+	int		length;
 
-	i = 0;
-	while (string[i] != NULL)
+	length = 0;
+	while (array[length])
 	{
-		free(string[i]);
-		string[i] = NULL;
-		i++;
+		printf("%s\n", array[length]);
+		length++;
 	}
-	free(string[i]);
-	free(string);
 }

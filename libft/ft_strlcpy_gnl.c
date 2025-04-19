@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_two_d_array.c                              :+:      :+:    :+:   */
+/*   ft_strlcpy_gnl.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: salshaha <salshaha@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/22 19:19:33 by maemran           #+#    #+#             */
-/*   Updated: 2025/04/14 10:03:15 by salshaha         ###   ########.fr       */
+/*   Created: 2025/04/13 18:46:16 by salshaha          #+#    #+#             */
+/*   Updated: 2025/04/14 09:58:07 by salshaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_tow_d_array(char **string)
+void	ft_strlcpy_gnl(char *dst, const char *src, size_t dstsize)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (string[i] != NULL)
+	if (dstsize > 0)
 	{
-		free(string[i]);
-		string[i] = NULL;
-		i++;
+		while (src[i] && i < dstsize - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	free(string[i]);
-	free(string);
 }

@@ -1,45 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split_cmd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: salshaha <salshaha@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: maemran <maemran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 18:37:36 by maemran           #+#    #+#             */
-/*   Updated: 2025/02/20 19:00:52 by salshaha         ###   ########.fr       */
+/*   Updated: 2025/04/19 08:13:40 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	find_qouts(char const *s, int i)
-{
-	int j;
-	int f;
-
-	f = i;
-	j = i + 1;
-	while(s[j++])
-	{
-		if (s[i] == '"')
-		{
-			if (s[j] == '"')
-			{
-				f = j;	
-				break;
-			}
-		}
-		else if (s[i] == '\'')
-		{
-			if (s[j] == '\'')
-			{
-				f = j;	
-				break;
-			}
-		}
-	}
-	return (f);
-}
 
 static int	count(char const *s, char c, int i, int type)
 {
@@ -49,7 +20,7 @@ static int	count(char const *s, char c, int i, int type)
 	while (type == 0 && s[i] != '\0')
 	{
 		if (s[i] == '"' || s[i] == '\'')
-			i = find_qouts(s, i);
+			i = find_qouts(s, i - 1, i);
 		if ((((s[i] >= 1 && s[i] <= 126) && s[i] != c) && s[i + 1] == c)
 			|| (((s[i] >= 1 && s[i] <= 126) && s[i] != c) && s[i + 1] == '\0'))
 			break ;
@@ -61,7 +32,7 @@ static int	count(char const *s, char c, int i, int type)
 	while (type == 1 && s[i] != '\0')
 	{
 		if (s[i] == '"' || s[i] == '\'')
-			i = find_qouts(s, i);
+			i = find_qouts(s, i - 1, i);
 		if ((((s[i] >= 1 && s[i] <= 126) && s[i] != c) && s[i + 1] == c)
 			|| (((s[i] >= 1 && s[i] <= 126) && s[i] != c) && s[i + 1] == '\0'))
 			count++;

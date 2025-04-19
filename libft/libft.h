@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: maemran <maemran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: salshaha <salshaha@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 19:59:24 by maemran           #+#    #+#             */
-/*   Updated: 2025/02/22 19:20:38 by maemran          ###   ########.fr       */
+/*   Updated: 2025/04/13 18:47:48 by salshaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#define BUFFER_SIZE 3
+# define BUFFER_SIZE 3
 # define BOLD "\033[1m"
 # define BLACK "\033[30m"
 # define RED "\033[31m"
@@ -25,6 +25,7 @@
 # define WHITE "\033[37m"
 # define RESET "\033[0m"
 
+# include <limits.h>
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -87,5 +88,13 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 void				print_ascii_art(void);
 char				*ft_strncpy(char *dest, char *src, unsigned int n);
 void				ft_free_tow_d_array(char **string);
+int					find_qouts(char const *s, int i, int x);
+char				*get_next_line(int fd);
+char				**ft_strdup_two_d(char **array);
+int					ft_two_d_len(char **array);
+void				ft_two_d_print(char **array);
+int					str_comp(char *str1, char *str2);
+int					ft_atoi_ll(const char *nptr, long long *result);
+void				ft_strlcpy_gnl(char *dst, const char *src, size_t dstsize);
 
 #endif

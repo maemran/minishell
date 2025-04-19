@@ -6,7 +6,7 @@
 /*   By: salshaha <salshaha@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 19:43:11 by maemran           #+#    #+#             */
-/*   Updated: 2025/02/21 16:42:36 by salshaha         ###   ########.fr       */
+/*   Updated: 2025/04/14 10:02:30 by salshaha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ char	*ft_strchr(const char *s, int c)
 // 	printf("%s", ft_strchr("teste\n", 's'));
 // 	printf("%s", strchr("teste\n", 's'));
 // }
-

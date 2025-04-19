@@ -6,11 +6,11 @@
 /*   By: maemran <maemran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 13:29:35 by maemran           #+#    #+#             */
-/*   Updated: 2024/12/31 22:21:13 by maemran          ###   ########.fr       */
+/*   Updated: 2025/03/17 00:18:36 by maemran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 static int	ft_process(const char *nptr, int length, int p, int n)
 {
