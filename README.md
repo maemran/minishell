@@ -1,5 +1,9 @@
 # 🐚 Minishell
 
+<p align="center">
+  <img src="./img/ascii_art.png" alt="so_long preview" width="600"/>
+</p>
+
 ## 📌 Project Overview
 
 **Minishell** is a simplified Unix shell implemented in C. It mimics the behavior of the Bash shell by interpreting and executing user commands. This project is a core part of the 42 School curriculum and aims to deepen understanding of process control, signal handling, parsing, and system calls in Unix-like operating systems.
